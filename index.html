@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="dist/js/built/vendor.js"></script>
+</head>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+               <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                        <li>
+                            <a class="page-scroll" href="#1"><span style="font-size:24px">Intro to ES6</span></a>
+                        </li>
+                         <li>
+                             <a class="page-scroll" href="#1"></a>
+                         </li>
+                         <li>
+                             <a class="page-scroll" href="#2"></a>
+                         </li>
+                         <li>
+                             <a class="page-scroll" href="#3"></a>
+                         </li>
+                         <li>
+                             <a class="page-scroll" href="#4"></a>
+                         </li>
+                         <li>
+                             <a class="page-scroll" href="#5"></a>
+                         </li>
+                         <li>
+                             <a class="page-scroll" href="#6"></a>
+                         </li>
+                         <li>
+                             <a class="page-scroll" href="#7"></a>
+                         </li>
+                         <li>
+                             <a class="page-scroll" href="#8"></a>
+                         </li>
+
+
+                </ul>
+                <select style="float:right" id="selection">
+                     <option value="#1">Default Parameters</option>
+                     <option value="#2">String Literals</option>
+                     <option value="#3">Multiline String</option>
+                     <option value="#4">Class System</option>
+                     <option value="#5">Arrow Functions</option>
+                     <option value="#6">Scoping</option>
+                     <option value="#7">Moduling</option>
+                     <option value="#8">Destructuring</option>
+                </select>
+        </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+        <!-- Intro Section -->
+
+        <!-- about Section -->
+    <section id="1" class="section">
+        <div class="container">
+          <h1>Default Parameters</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <h1>es5</h1>
+              <pre>
+                <code>
+                  function(x,y) {
+                    var a = x || 1;
+                    var b = y || 1;
+                    return a+b;
+                  }
+                </code>
+              </pre>
+              <p id="1-es5">Output:<span></span></p>
+            </div>
+            <div class="col-md-6">
+              <h1>es6</h1>
+              <pre>
+                <code>
+                  function(x=1,y=1) {
+                    return x+y;
+                  }
+                </code>
+              </pre>
+              <p id="1-es6">Output:<span></span></p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="2" class="section">
+      <div class="container">
+        <h1>String Literals</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h1>es5</h1>
+            <pre>
+              <code>
+                var first = "Rupesh";
+                var last = "B";
+                var text = "My Name is" + " "+ first + " " + last;
+              </code>
+            </pre>
+            <p id="2-es5">Output:<span></span></p>
+          </div>
+          <div class="col-md-6">
+            <h1>es6</h1>
+            <pre>
+              <code>
+                var first = "Rupesh";
+                var last = "B";
+                var text = `My Name is ${first} ${last}`;
+              </code>
+            </pre>
+            <p id="2-es6">Output:<span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="3" class="section">
+      <div class="container">
+        <h1>Multiline String</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h1>es5</h1>
+            <pre>
+              <code>
+                <p style="margin-left:-170px">
+                  var paragraph = "My name is Rupesh"
+                    + "I am currently working at Rakuten"
+                    + "My expertise are mobile application"
+                    +"development and front end engineering."
+                </p>
+              </code>
+            </pre>
+            <p id="3-es5">Output:<span></span></p>
+          </div>
+          <div class="col-md-6">
+            <h1>es6</h1>
+            <pre>
+              <code>
+                <p style="margin-left:-170px">
+                  var paragraph = `My name is Rupesh
+                    I am currently working at Rakuten
+                    My expertise are mobile application
+                    development and front end engineering`
+                </p>
+              </code>
+            </pre>
+            <p id="3-es6">Output:<span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="4" class="section">
+      <div class="container">
+        <h1>Class System</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h1>es5</h1>
+            <pre>
+              <code>
+                <p style="margin-left:-170px">
+                  function Person() {
+                  }
+                  var person = new Person();
+                </p>
+              </code>
+            </pre>
+            <p id="4-es5">Output:<span></span></p>
+          </div>
+          <div class="col-md-6">
+            <h1>es6</h1>
+            <pre>
+              <code>
+                <p style="margin-left:-170px">
+                    class Person {
+                      constructor() {
+
+                      }
+                    }
+                    let person = new Person();
+                </p>
+              </code>
+            </pre>
+            <p id="4-es6">Output:<span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="5" class="section">
+      <div class="container">
+        <h1>Arrow Functions</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h1>es5</h1>
+            <pre>
+              <code>
+                function(x,y) {
+                  return x+y
+                }
+              </code>
+            </pre>
+            <p id="5-es5">Output:<span></span></p>
+          </div>
+          <div class="col-md-6">
+            <h1>es6</h1>
+            <pre>
+              <code>
+                (x,y) => {
+                  return x+y
+                };
+              </code>
+            </pre>
+            <p id="5-es6">Output:<span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="6" class="section">
+      <div class="container">
+        <h1>Scoping</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h1>es5</h1>
+            <pre>
+              <code>
+                function() {
+                  var API_URL="www.google.com"
+                  if(true) {
+                    var a = 5;
+                  }
+                  API_URL = "facebook.com"
+                  console.log("es5",a);
+                }
+              </code>
+            </pre>
+            <p id="6-es5">Output:<span></span></p>
+          </div>
+          <div class="col-md-6">
+            <h1>es6</h1>
+            <pre>
+              <code>
+                function() {
+                  const URL = "www.google.com";
+                  if(true) {
+                    let a = 5;
+                  }
+                  console.log("es6",a);
+                }
+              </code>
+            </pre>
+            <p id="6-es6">Output:<span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="7" class="section">
+      <div class="container">
+        <h1>Modules</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h1>es5</h1>
+            <pre>
+              <code>
+                module.export = 'hello';
+                require('./hello');
+              </code>
+            </pre>
+            <p id="7-es5">Output:<span></span></p>
+          </div>
+          <div class="col-md-6">
+            <h1>es6</h1>
+            <pre>
+              <code>
+                export default hello;
+                import hello from './hello';
+              </code>
+            </pre>
+            <p id="7-es6">Output:<span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="8" class="section">
+      <div class="container">
+        <h1>Destructuring</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h1>es5</h1>
+            <pre>
+              <code>
+                var person = {name: "Rupesh",age: 25,rank: 1};
+                var name = person.name;
+                var age = person.age;
+              </code>
+            </pre>
+            <p id="8-es5">Output:<span></span></p>
+          </div>
+          <div class="col-md-6">
+            <h1>es6</h1>
+            <pre>
+              <code>
+                let person = {name: "Rupesh",age: 25,rank: 1};
+                let {name, age} = person;
+              </code>
+            </pre>
+            <p id="8-es6">Output:<span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+     <script src="dist/js/built/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "parser": 'babel-eslint',
+    "rules": {
+        "curly": [2, "all"],
+        "indent": [2, 4],
+        "semi": [2, "always"],
+        "max-len": [2, 120, 4, {"ignoreComments": true, "ignoreTrailingComments": true}]
+    }
+}
