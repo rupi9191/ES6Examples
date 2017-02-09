@@ -44,10 +44,13 @@
                          <li>
                              <a class="page-scroll" href="#8"></a>
                          </li>
+                         <li>
+                             <a class="page-scroll" href="#9"></a>
+                         </li>
 
 
                 </ul>
-                <select style="float:right" id="selection">
+                <select style="float:right;height:30px;margin-top: 10px;" id="selection">
                      <option value="#1">Default Parameters</option>
                      <option value="#2">String Literals</option>
                      <option value="#3">Multiline String</option>
@@ -56,6 +59,7 @@
                      <option value="#6">Scoping</option>
                      <option value="#7">Moduling</option>
                      <option value="#8">Destructuring</option>
+                     <option value="#9">Spread Operator</option>
                 </select>
         </div>
             <!-- /.navbar-collapse -->
@@ -80,7 +84,7 @@
                   }
                 </code>
               </pre>
-              <p id="1-es5">Output:<span></span></p>
+            <p class="es5"><b>Output:</b><span></span></p>
             </div>
             <div class="col-md-6">
               <h1>es6</h1>
@@ -91,7 +95,7 @@
                   }
                 </code>
               </pre>
-              <p id="1-es6">Output:<span></span></p>
+              <p class="es6"><b>Output:</b><span></span></p>
             </div>
           </div>
         </div>
@@ -109,7 +113,7 @@
                 var text = "My Name is" + " "+ first + " " + last;
               </code>
             </pre>
-            <p id="2-es5">Output:<span></span></p>
+            <p class="es5">Output:<span></span></p>
           </div>
           <div class="col-md-6">
             <h1>es6</h1>
@@ -120,7 +124,7 @@
                 var text = `My Name is ${first} ${last}`;
               </code>
             </pre>
-            <p id="2-es6">Output:<span></span></p>
+            <p class="es6"><b>Output:</b><span></span></p>
           </div>
         </div>
       </div>
@@ -142,7 +146,7 @@
                 </p>
               </code>
             </pre>
-            <p id="3-es5">Output:<span></span></p>
+            <p class="es5"><b>Output:</b><span></span></p>
           </div>
           <div class="col-md-6">
             <h1>es6</h1>
@@ -156,7 +160,7 @@
                 </p>
               </code>
             </pre>
-            <p id="3-es6">Output:<span></span></p>
+            <p class="es6"><b>Output:</b><span></span></p>
           </div>
         </div>
       </div>
@@ -170,29 +174,36 @@
             <pre>
               <code>
                 <p style="margin-left:-170px">
-                  function Person() {
-                  }
-                  var person = new Person();
+                  let PersonES5 = function(name) {
+                      this.name = name;
+                      this.getName = function() {
+                          return this.name;
+                      };
+                  };
+
                 </p>
               </code>
             </pre>
-            <p id="4-es5">Output:<span></span></p>
+            <p class="es5"><b>Output:</b><span></span></p>
           </div>
           <div class="col-md-6">
             <h1>es6</h1>
             <pre>
               <code>
                 <p style="margin-left:-170px">
-                    class Person {
-                      constructor() {
-
+                  class PersonES6 {
+                      constructor(name) {
+                          this.name = name;
                       }
-                    }
-                    let person = new Person();
+
+                      getName() {
+                          return this.name;
+                      }
+                  }
                 </p>
               </code>
             </pre>
-            <p id="4-es6">Output:<span></span></p>
+            <p class="es6"><b>Output:</b><span></span></p>
           </div>
         </div>
       </div>
@@ -210,7 +221,7 @@
                 }
               </code>
             </pre>
-            <p id="5-es5">Output:<span></span></p>
+            <p class="es5"><b>Output:</b><span></span></p>
           </div>
           <div class="col-md-6">
             <h1>es6</h1>
@@ -221,7 +232,7 @@
                 };
               </code>
             </pre>
-            <p id="5-es6">Output:<span></span></p>
+            <p class="es6"><b>Output:</b><span></span></p>
           </div>
         </div>
       </div>
@@ -234,32 +245,31 @@
             <h1>es5</h1>
             <pre>
               <code>
-                function() {
-                  var API_URL="www.google.com"
-                  if(true) {
-                    var a = 5;
-                  }
-                  API_URL = "facebook.com"
-                  console.log("es5",a);
-                }
+                const es5Scoping = function () {
+                    if(true) {
+                        var name = "Rupesh";
+                    }
+                    console.log("es5-scoping",name);
+                    return name;
+                };
               </code>
             </pre>
-            <p id="6-es5">Output:<span></span></p>
+            <p class="es5"><b>Output:</b><span></span></p>
           </div>
           <div class="col-md-6">
             <h1>es6</h1>
             <pre>
               <code>
-                function() {
-                  const URL = "www.google.com";
-                  if(true) {
-                    let a = 5;
-                  }
-                  console.log("es6",a);
-                }
+                const es6Scoping = function() {
+                    if(true) {
+                        let name = "Rupesh";
+                    }
+                    console.log("es6-scoping",name);
+                    return name;
+                };
               </code>
             </pre>
-            <p id="6-es6">Output:<span></span></p>
+            <p class="es6"><b>Output:</b><span></span></p>
           </div>
         </div>
       </div>
@@ -276,7 +286,7 @@
                 require('./hello');
               </code>
             </pre>
-            <p id="7-es5">Output:<span></span></p>
+            <p class="es5"><b>Output:</b><span></span></p>
           </div>
           <div class="col-md-6">
             <h1>es6</h1>
@@ -286,7 +296,7 @@
                 import hello from './hello';
               </code>
             </pre>
-            <p id="7-es6">Output:<span></span></p>
+            <p class="es6"><b>Output:</b><span></span></p>
           </div>
         </div>
       </div>
@@ -304,7 +314,7 @@
                 var age = person.age;
               </code>
             </pre>
-            <p id="8-es5">Output:<span></span></p>
+            <p class="es5"><b>Output:</b><span></span></p>
           </div>
           <div class="col-md-6">
             <h1>es6</h1>
@@ -314,7 +324,36 @@
                 let {name, age} = person;
               </code>
             </pre>
-            <p id="8-es6">Output:<span></span></p>
+            <p class="es6"><b>Output:</b><span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="9" class="section">
+      <div class="container">
+        <h1>Spread Operator</h1>
+        <div class="row">
+          <div class="col-md-6">
+            <h1>es5</h1>
+            <pre>
+              <code>
+                var arr1 = [1,2], arr2 = [3,4];
+                arr1.concat(arr2);
+                //arr1 is [1,2,3,4]
+              </code>
+            </pre>
+            <p class="es5"><b>Output:</b><span></span></p>
+          </div>
+          <div class="col-md-6">
+            <h1>es6</h1>
+            <pre>
+              <code>
+                let  arr2 = [3,4];
+                let arr1 = [1, 2, ...arr2];
+                //arr1 is [1,2,3,4]
+              </code>
+            </pre>
+            <p class="es6"><b>Output:</b><span></span></p>
           </div>
         </div>
       </div>
