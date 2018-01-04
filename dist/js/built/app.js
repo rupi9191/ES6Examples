@@ -63,11 +63,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
                 (0, _jquery2.default)(id).find(".es6 span").text((0, _spreadOperator.es6SpreadOperator)());
                 break;
         }
-        (0, _jquery2.default)("body").animate({ scrollTop: (0, _jquery2.default)($anchor.attr('href')).offset().top }, 1000);
+        (0, _jquery2.default)('html,body').animate({ scrollTop: (0, _jquery2.default)($anchor.attr('href')).offset().top }, 1000);
     });
 
     (0, _jquery2.default)("select").on('change', function (e) {
-        console.log(this.value);
         (0, _jquery2.default)('a.page-scroll[href="' + e.target.value + '"]').click();
     });
 });

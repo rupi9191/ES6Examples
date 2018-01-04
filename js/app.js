@@ -49,11 +49,10 @@ $(document).ready(function(){
             $(id).find(".es6 span").text(es6SpreadOperator());
             break;
         }
-        $("body").animate({ scrollTop: $($anchor.attr('href')).offset().top }, 1000);
+        $('html,body').animate({ scrollTop: $($anchor.attr('href')).offset().top }, 1000);
     });
 
     $("select").on('change', function (e) {
-        console.log(this.value);
         $('a.page-scroll[href="' +e.target.value+'"]').click();
     });
 });
